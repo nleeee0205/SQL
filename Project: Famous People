@@ -1,0 +1,34 @@
+# In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists.
+
+CREATE TABLE athletes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    sport TEXT);
+    
+INSERT INTO athletes (fullname, age, sport) VALUES ("Tiger Woods", 47, "Golf");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Lionel Messi", 36, "Soccer");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Michael Jordan", 60, "Basketball");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Usian Bolt", 37, "Track&Field");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Roger Federer", 42, "Tennis");
+INSERT INTO athletes (fullname, age, sport) VALUES ("Muhammad Ali", 74, "Boxing");
+
+
+CREATE table wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    athlete_id INTEGER,
+    net_worth TEXT);
+    
+INSERT INTO wealth (athlete_id, net_worth) VALUES (1, "1.1 billion");
+INSERT INTO wealth (athlete_id, net_worth) VALUES (2, "600 million");
+INSERT INTO wealth (athlete_id, net_worth) VALUES (3, "3 billion");
+INSERT INTO wealth (athlete_id, net_worth) VALUES (4, "90 million");
+INSERT INTO wealth (athlete_id, net_worth) VALUES (5, "550 million");
+INSERT INTO wealth (athlete_id, net_worth) VALUES (6, "80 million");
+
+# List the athletes next to the sports they played throughout their career. Then, calculate the total net worth for each athlete.
+
+SELECT athletes.fullname, athletes.sport, wealth.net_worth
+FROM athletes
+LEFT OUTER JOIN wealth
+ON athletes.id= wealth.athlete_id
