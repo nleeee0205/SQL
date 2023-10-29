@@ -1,4 +1,4 @@
-#This is an analysis from the Chinook Dataset.
+#This is an analysis from the Chinook Dataset. 
 
 #1. Show Customers (their full names, customer ID, and country) who are not in the US.
 SELECT FirstName, LastName, CustomerID, Country
