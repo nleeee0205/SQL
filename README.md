@@ -1,6 +1,6 @@
-# Noah Lee's SQL Porfolio
+# Noah Lee's Technology Porfolio
 
-Hello! Welcome to my SQL Portfolio! This repository showcases a collection of SQL projects and queries that demonstrate my skills and expertise in working with databases.
+Hello! Welcome to my Technology Portfolio! This repository showcases a collection of projects and queries that demonstrate my skills and expertise in working with databases and Information Technology.
 
 ## Contact Information
 
